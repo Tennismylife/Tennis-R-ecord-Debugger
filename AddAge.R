@@ -85,6 +85,8 @@ stat$year <- stringr::str_sub(stat$tourney_id, 0 ,4)
 
 years <- unique(dplyr::pull(stat, year))
 
+
+
 print(born)
 
 for(i in 1:length(years)){
@@ -95,8 +97,7 @@ yearRows <- read.csv(file = fileToRead)
 
 rows <- NULL
 
-for(j in 1:nrow(yearRows)) 
-  {
+for(j in 1:nrow(yearRows)) {
   
   row <- yearRows[j,]
 
@@ -112,11 +113,11 @@ for(j in 1:nrow(yearRows))
 
   rows <- rbind(rows, row)
 
-  }
+}
 
 write.csv(rows, fileToRead, na="", quote=F, row.names = FALSE)
-  }
+}
 
-  }
+}
 
 }

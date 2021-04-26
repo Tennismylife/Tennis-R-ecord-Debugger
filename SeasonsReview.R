@@ -4,7 +4,7 @@ source("ScrapeWLYear.R")
 
 db <- ParallelReader()
 
-player <- 'Bjorn Borg'
+player <- 'Cliff Drysdale'
 
 seasons <- db[winner_name == player | loser_name == player]
 
